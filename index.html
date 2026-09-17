@@ -92,22 +92,91 @@
         <span>03</span>
         <h2 data-ku="کارەکانمان" data-en="Our Work" data-ar="أعمالنا">کارەکانمان</h2>
       </div>
-      <p class="section-intro" data-ku="وێنەی پڕۆژەکانت لەم بەشە زیاد دەکەین. کاتێک وێنەکانی کارەکانت بنێریت، ئەم گەلەرییە بە وێنە ڕاستەقینەکانت پڕ دەکەم." data-en="Your real project photos can be added here. Send the project images and this gallery can be updated with them." data-ar="يمكن إضافة صور مشاريعك الحقيقية هنا. أرسل صور الأعمال وسنحدّث المعرض بها.">وێنەی پڕۆژەکانت لەم بەشە زیاد دەکەین. کاتێک وێنەکانی کارەکانت بنێریت، ئەم گەلەرییە بە وێنە ڕاستەقینەکانت پڕ دەکەم.</p>
-      <div class="gallery">
-        <div class="gallery-main project-photo">
-          <img src="assets/project-1.jpg" alt="Ranj Solar Panel project">
-          <div class="photo-label" data-ku="پڕۆژەی سۆلار" data-en="Solar project" data-ar="مشروع شمسي">پڕۆژەی سۆلار</div>
-        </div>
-        <div class="gallery-small project-photo">
-          <img src="assets/project-2.jpg" alt="Solar panel installation by Ranj">
-          <div class="photo-label" data-ku="دامەزراندنی پەنێڵ" data-en="Panel installation" data-ar="تركيب الألواح">دامەزراندنی پەنێڵ</div>
-        </div>
-        <div class="gallery-small project-photo">
-          <img src="assets/project-3.jpg" alt="Ranj Solar Panel work">
-          <div class="photo-label" data-ku="کارەکانی Ranj" data-en="Ranj Solar work" data-ar="أعمال Ranj Solar">کارەکانی Ranj</div>
-        </div>
+
+      <p class="section-intro"
+         data-ku="هەندێک لە کار و پڕۆژەکانی Ranj Solar Panel ببینە."
+         data-en="Explore some of our solar panel work and projects."
+         data-ar="استكشف بعض أعمال ومشاريع Ranj Solar Panel.">
+        هەندێک لە کار و پڕۆژەکانی Ranj Solar Panel ببینە.
+      </p>
+
+      <div class="modern-gallery" id="projectGallery">
+
+        <button class="gallery-card gallery-card-featured"
+                type="button"
+                data-image="assets/project-1.jpg"
+                data-title-ku="پڕۆژەی سۆلار"
+                data-title-en="Solar project"
+                data-title-ar="مشروع شمسي"
+                aria-label="Open solar project image">
+          <img src="assets/project-1.jpg" alt="Ranj Solar Panel project" loading="lazy">
+          <span class="gallery-card-overlay">
+            <span class="gallery-card-title"
+                  data-ku="پڕۆژەی سۆلار"
+                  data-en="Solar project"
+                  data-ar="مشروع شمسي">پڕۆژەی سۆلار</span>
+            <span class="gallery-view"
+                  data-ku="بینینی وێنە ↗"
+                  data-en="View image ↗"
+                  data-ar="عرض الصورة ↗">بینینی وێنە ↗</span>
+          </span>
+        </button>
+
+        <button class="gallery-card"
+                type="button"
+                data-image="assets/project-2.jpg"
+                data-title-ku="دامەزراندنی پەنێڵ"
+                data-title-en="Panel installation"
+                data-title-ar="تركيب الألواح"
+                aria-label="Open panel installation image">
+          <img src="assets/project-2.jpg" alt="Solar panel installation by Ranj" loading="lazy">
+          <span class="gallery-card-overlay">
+            <span class="gallery-card-title"
+                  data-ku="دامەزراندنی پەنێڵ"
+                  data-en="Panel installation"
+                  data-ar="تركيب الألواح">دامەزراندنی پەنێڵ</span>
+            <span class="gallery-view"
+                  data-ku="بینینی وێنە ↗"
+                  data-en="View image ↗"
+                  data-ar="عرض الصورة ↗">بینینی وێنە ↗</span>
+          </span>
+        </button>
+
+        <button class="gallery-card"
+                type="button"
+                data-image="assets/project-3.jpg"
+                data-title-ku="کارەکانی Ranj Solar"
+                data-title-en="Ranj Solar work"
+                data-title-ar="أعمال Ranj Solar"
+                aria-label="Open Ranj Solar work image">
+          <img src="assets/project-3.jpg" alt="Ranj Solar Panel work" loading="lazy">
+          <span class="gallery-card-overlay">
+            <span class="gallery-card-title"
+                  data-ku="کارەکانی Ranj Solar"
+                  data-en="Ranj Solar work"
+                  data-ar="أعمال Ranj Solar">کارەکانی Ranj Solar</span>
+            <span class="gallery-view"
+                  data-ku="بینینی وێنە ↗"
+                  data-en="View image ↗"
+                  data-ar="عرض الصورة ↗">بینینی وێنە ↗</span>
+          </span>
+        </button>
+
       </div>
     </section>
+
+    <!-- Gallery lightbox -->
+    <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">×</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous">‹</button>
+
+      <figure class="lightbox-content">
+        <img id="lightboxImage" src="" alt="">
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Next">›</button>
+    </div>
 
     <section id="contact" class="section contact">
       <div class="contact-card">
